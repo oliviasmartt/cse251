@@ -1,7 +1,7 @@
 """
 File: server.py
 Course: CSE251
-Author: Brother Comeau
+Author: Olivia Smart
 
 Instructions
 - In a terminal window, run "python server.py"
@@ -61,11 +61,11 @@ class Handler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(str.encode(reply))
         else:
-            # remove the ending '/' if found
+        
             if self.path[-1] == '/':
                 self.path = self.path[:-1]
 
-            request = self.path[1:]   # "people/1"
+            request = self.path[1:]  
             parts = request.split('/')
             # print(parts)
             if len(parts) != 2:
